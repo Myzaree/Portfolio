@@ -2,7 +2,7 @@
 .DS_Store
 
 # PHPStorm
-.idea
+/.idea
 
 # Vendor directories
-vendor/*
+/vendor/
