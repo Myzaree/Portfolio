@@ -1,0 +1,8 @@
+# Mac
+.DS_Store
+
+# PHPStorm
+.idea
+
+# Vendor directories
+vendor/*
