@@ -9,8 +9,6 @@ class Configuration
     public function __construct($data)
     {
         foreach ($data as $key => $value) {
-
-
             $this->set($key, $value);
         }
     }
