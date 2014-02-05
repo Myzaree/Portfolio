@@ -4,6 +4,7 @@ $di
     ->register(App\Framework\BaseRouter::class, 'router')
     ->toSelf()
     ->addMethodCall('setControllerPrefix', [$config->get('controller.prefix')])
+    ->asShared()
 ;
 
 $di

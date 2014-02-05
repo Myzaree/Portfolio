@@ -1,7 +1,13 @@
 <?php
 
-function dump($data, $objects = null) {
-    $objects = is_null($objects) ? new SplObjectStorage() : $objects;
+function dump($data) {
+    static $current_array = '';
+    static $hashes = [0 => 0];
+    static $objects = null;
+
+    if (is_null($objects)) {
+        $objects = new SplObjectStorage();
+    }
 
     // get a color for the different types
     $getColor = function ($data) {
@@ -11,27 +17,6 @@ function dump($data, $objects = null) {
 
         return $color;
     };
-
-    $getObjectId = function (&$obj) {
-        if(!is_object($obj))
-            return false;
-        ob_start();
-        var_dump($obj); // object(foo)#INSTANCE_ID (0) { }
-        preg_match('~^.+?#(\d+)~s', ob_get_clean(), $oid);
-        return $oid[1];
-    };
-
-    // check for circular references
-    if (is_object($data)) {
-        if ($objects->contains($data)) {
-            echo sprintf('<pre style="display: inline; margin: 0;"><strong>%s</strong>', gettype($data));
-            echo sprintf('(<em>%s</em>) #%d </pre>', get_class($data), $getObjectId($data));
-            echo '<span style="color: #2980b9; font-size: 0.8em;">*RECURSION DETECTED*</span>';
-            return;
-        } else {
-            $objects->attach($data);
-        }
-    }
 
     // output and exit early on simple data
     if (!is_object($data) && !is_array($data)) {
@@ -44,12 +29,20 @@ function dump($data, $objects = null) {
         return;
     }
 
+    $object_hash = is_object($data) ? spl_object_hash($data) : 0;
+
+    // save object hashes
+    if (is_object($data) && !array_key_exists($object_hash, $hashes)) {
+        $hashes[$object_hash] = max($hashes) + 1;
+    }
+
     // create the object and array headers
     $class = is_object($data) ? get_class($data) : '';
-    $object_id = is_object($data) ? '#' . $getObjectId($data) : '';
+    $object_id = is_object($data) ? '#' . $hashes[$object_hash] : '';
 
     echo sprintf('<pre style="display: inline; margin: 0;"><strong>%s</strong>', gettype($data));
     echo sprintf('(<em>%s</em>) %s (%s)</pre>', $class, $object_id, count((array) $data));
+
 
     // unify the variables in objects
     if (is_object($data)) {
@@ -80,8 +73,24 @@ function dump($data, $objects = null) {
     foreach ($data as $key => $value) {
         // recursively display objects and array
         if (is_object($value) || is_array($value)) {
+            // check for circular references
+            if (is_object($value) && $current_array == $key) {
+                $object_hash = spl_object_hash($value);
+
+                if ($objects->contains($value)) {
+                    echo sprintf('<pre style="display: inline; margin: 0;"><strong>%s</strong>', gettype($value));
+                    echo sprintf('(<em>%s</em>) #%d </pre>', get_class($value), $hashes[$object_hash]);
+                    echo '<span style="color: #2980b9; font-size: 0.8em;">*RECURSION*</span>';
+                    continue;
+                } else {
+                    $objects->attach($value);
+                }
+            }
+
+            $current_array = $key;
+
             echo sprintf('<li style="margin: 0;"><pre style="display: inline; margin: 0;">[%s] </pre>', $key);
-            dump($value, $objects);
+            dump($value);
             echo '</li>';
             continue;
         }
