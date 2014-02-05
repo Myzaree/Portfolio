@@ -14,6 +14,11 @@ $router = $di->get('router');
 /** @var Request $request */
 $request = $di->get('request');
 
+dump($di);
+//echo '<pre>';
+//var_dump($di);
+//echo '</pre>';
+
 try {
     $router->dispatch($request->getPathInfo());
 } catch (NotFoundException $e) {
