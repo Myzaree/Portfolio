@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "0b4517a8e0abb1fa27140119f2ee0b76",
+    "hash": "331a3443cc2887c5703c90ccb6b9663d",
     "packages": [
         {
             "name": "dcp/di",
