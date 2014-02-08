@@ -51,40 +51,42 @@ h4 {
     background-color: #cbcbcb;
     position: absolute;
     top: 0;
-    left: 30%;
+    left: 38%;
     margin: 0;
     padding: 0;
-    width: 70%;
+    width: 62%;
  }
 
 .main-content-inner {
     background-color: #cbcbcb;
     float: left; margin: 0; padding: 0;
-    width: 70%;
+    width: 62%;
 }
 
 /*------------------------------------*\
     $SIDEBAR
 \*------------------------------------*/
 
-.sidebar-wrapper { height: 100%; width: 100%; }
-
 .sidebar-left {
     background-color: #ededed;
-    position: absolute;
-    top: 0;
+    position: fixed;
     left: 0;
     margin: 0;
     padding: 0;
     height: auto;
     min-height: 100%;
-    width: 30%;
+    width: 38%;
 }
 
 .sidebar-right {
     background-color: #ededed;
-    float: left; margin: 0; padding: 0;
-    height: 100%; width: 30%;
+    position: absolute;
+    left: 62%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100%;
+    width: 38%;
 }
 
 /*------------------------------------*\
