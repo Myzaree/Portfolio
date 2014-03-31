@@ -1,0 +1,23 @@
+{
+    "name": "portfolio",
+    "license": "MIT",
+    "type": "project",
+    "description": "Cameron Condry's Portfolio",
+    "autoload": {
+        "psr-0": { "App\\": "src/" }
+    },
+    "require": {
+        "dcp/di": "dev-master",
+        "dcp/router": "1.0.*",
+        "league/plates": "1.*",
+        "symfony/http-foundation": "2.4.*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "composer dump-autoload --optimize"
+        ],
+        "post-update-cmd": [
+            "composer dump-autoload"
+        ]
+    }
+}

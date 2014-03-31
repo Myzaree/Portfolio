@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+
+    # Route all other valid requests through "index.php"
+    # RewriteCond %{REQUEST_URI} !(assets|favicon\.ico).*
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule (.*) index.php [QSA,L]
+</IfModule>
+
+# Add custom error documents
+# ErrorDocument 403 /errors/403.php
+# ErrorDocument 404 /errors/404.php

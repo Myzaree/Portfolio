@@ -1,0 +1,249 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "40d7e597af5820edd9c94d6a5e3fb5c2",
+    "packages": [
+        {
+            "name": "dcp/di",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/estelsmith/dcp-di.git",
+                "reference": "0c37c3b6f3e8df75fd04ae72f52f882ee76c6516"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/estelsmith/dcp-di/zipball/0c37c3b6f3e8df75fd04ae72f52f882ee76c6516",
+                "reference": "0c37c3b6f3e8df75fd04ae72f52f882ee76c6516",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "DCP\\Di\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Estel Smith",
+                    "email": "estel.smith@gmail.com"
+                }
+            ],
+            "description": "Provides a minimalistic dependency injection container.",
+            "keywords": [
+                "dependency-injection"
+            ],
+            "time": "2014-02-28 19:37:07"
+        },
+        {
+            "name": "dcp/router",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/estelsmith/dcp-router.git",
+                "reference": "355955f8a82bda966d1237b1ee488ca13dc92ca0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/estelsmith/dcp-router/zipball/355955f8a82bda966d1237b1ee488ca13dc92ca0",
+                "reference": "355955f8a82bda966d1237b1ee488ca13dc92ca0",
+                "shasum": ""
+            },
+            "require": {
+                "evenement/evenement": "2.0.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "DCP\\Router\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Estel Smith",
+                    "email": "estel.smith@gmail.com"
+                }
+            ],
+            "description": "Provides an extensible, event-oriented,  MVC and REST router",
+            "keywords": [
+                "mvc",
+                "rest",
+                "routing"
+            ],
+            "time": "2014-01-11 18:28:59"
+        },
+        {
+            "name": "evenement/evenement",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igorw/evenement.git",
+                "reference": "f6e843799fd4f4184d54d8fc7b5b3551c9fa803e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/igorw/evenement/zipball/f6e843799fd4f4184d54d8fc7b5b3551c9fa803e",
+                "reference": "f6e843799fd4f4184d54d8fc7b5b3551c9fa803e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Evenement": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch",
+                    "homepage": "http://wiedler.ch/igor/"
+                }
+            ],
+            "description": "Événement is a very simple event dispatching library for PHP",
+            "keywords": [
+                "event-dispatcher",
+                "event-emitter"
+            ],
+            "time": "2012-11-02 14:49:47"
+        },
+        {
+            "name": "league/plates",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/plates.git",
+                "reference": "f07800f916133f3767057f2518380211241215aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/plates/zipball/f07800f916133f3767057f2518380211241215aa",
+                "reference": "f07800f916133f3767057f2518380211241215aa",
+                "shasum": ""
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "v1.2.0",
+                "mockery/mockery": "dev-master@dev",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\Plates\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Reinink",
+                    "email": "jonathan@reinink.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Plates, the native PHP template system that’s fast, easy to use and easy to extend.",
+            "homepage": "http://platesphp.com",
+            "keywords": [
+                "league",
+                "package",
+                "templating"
+            ],
+            "time": "2014-02-20 16:17:35"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "v2.4.2",
+            "target-dir": "Symfony/Component/HttpFoundation",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/HttpFoundation.git",
+                "reference": "cdee7c84ba8b2a8aafa1c055f5cb4f640d81c129"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/cdee7c84ba8b2a8aafa1c055f5cb4f640d81c129",
+                "reference": "cdee7c84ba8b2a8aafa1c055f5cb4f640d81c129",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\HttpFoundation\\": ""
+                },
+                "classmap": [
+                    "Symfony/Component/HttpFoundation/Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony HttpFoundation Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-02-11 15:39:28"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "dcp/di": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
