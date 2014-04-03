@@ -7,20 +7,16 @@
 </head>
 <body>
 <div id="allwrap">
-    <div id="nav">
-        <?= $this->insert('Base/nav') ?>
+    <div id="sidebar">
+        <?= $this->insert('Base/sidebar') ?>
     </div>
 
-    <div id="main-content">
-        <div id="content">
-            <section>
-                <?= $this->section ?>
-                <?= $this->stats ?>
-            </section>
-            <aside>
-                <?= $this->aside ?>
-            </aside>
-        </div>
+    <div id="main">
+        <section>
+            <?= $this->content ?>
+            <hr/>
+            <?php \App\Utility\Steve::results() ?>
+        </section>
     </div>
 </div>
 </body>

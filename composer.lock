@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "40d7e597af5820edd9c94d6a5e3fb5c2",
+    "hash": "a566d3eed3d3d7cc405236ab51d47241",
     "packages": [
         {
             "name": "dcp/di",
@@ -134,16 +134,16 @@
         },
         {
             "name": "league/plates",
-            "version": "1.2.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/plates.git",
-                "reference": "f07800f916133f3767057f2518380211241215aa"
+                "reference": "9b49547465879cdcac0570a63933222464a77243"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/plates/zipball/f07800f916133f3767057f2518380211241215aa",
-                "reference": "f07800f916133f3767057f2518380211241215aa",
+                "url": "https://api.github.com/repos/thephpleague/plates/zipball/9b49547465879cdcac0570a63933222464a77243",
+                "reference": "9b49547465879cdcac0570a63933222464a77243",
                 "shasum": ""
             },
             "require-dev": {
@@ -175,7 +175,7 @@
                 "package",
                 "templating"
             ],
-            "time": "2014-02-20 16:17:35"
+            "time": "2014-03-31 17:30:05"
         },
         {
             "name": "symfony/http-foundation",

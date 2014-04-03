@@ -1,138 +1,233 @@
 /*
-    Title:  Portfolio
-    Author: Cameron Condry <ccondry2@gmail.com> (www.cameroncondry.com)
+    Title: Portfolio
+    Author: Cameron Condry <ccondry2@gmail.com>
 
     Table of Contents:
-        $Base           - elements (h1, ul, a)
-        $Content        - general content
-        $Helpers        - helper classes for use across the system
+        #General
+        #Shared
+        #Sidebar
+        #Content
 */
 
-/* ---------------------------------------------------------------------- *\
-    $Base
-\* ---------------------------------------------------------------------- */
+/* ========================================== *\
+    #General
+\* ========================================== */
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-    width: 100%; height: 100%; min-height: 100%;
-}
+/* font-size: 62.5% = 10px */
+html { font-size: 62.5%; height: 100%; min-height: 100%; width: 100%; }
 
+/*
+    font-size: 10 (base font) * 16 (target font) = 1.6rem
+    line-height: 26 (base line-height) / 16 (target font) = 1.625
+*/
 body {
-    width: 100%; height: 100%; min-height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em; line-height: 1.35em; color: #222; text-align: left;
+    color: #222;
+    font-size: 1.6rem; font-family: 'Lucida Grande', sans-serif;
+    line-height: 1.625;
+    height: 100%; width: 100%;
 }
-
-::-moz-selection { background: #8e44ad; color: #ecf0f1; text-shadow: none; }
-::selection { background: #8e44ad; color: #ecf0f1; text-shadow: none; }
 
 a { color: #3498db; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif; font-weight: normal;
-    line-height: 1em; letter-spacing: -1px;
-    margin: 0; padding: 0.2em 0;
-}
-
-h1, h2 {
-    box-shadow: 0 2px 0 #ccc;
-    color: #e74c3c;
-    font-size: 1.8em;
-    margin-bottom: 0.3em;
-}
-
-h3 {
-    font-size: 1.0em; line-height: 0.85em; letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-
-
-pre { font-size: 0.85em; line-height: 1.0em; overflow-y: hidden !important; }
-
 hr {
     display: block;
-    height: 1px;
-    border: 0; border-top: 1px solid #ccc;
-    margin: 1em 0; padding: 0;
+    border: 0; border-top: 0.1rem solid #ccc;
+    height: 1px; width: 99%;
+    margin: 1rem auto; padding: 0;
 }
 
-/* ---------------------------------------------------------------------- *\
-    $Content
-\* ---------------------------------------------------------------------- */
-
-#allwrap, {
-    height: 100%; width: 100%;
-}
-
-#nav {
-    position: fixed;
-    top: 0; left: 0;
-    height: 100%; width: 24%;
-}
-
-#main-content {
-    position: absolute;
-    top: 0; left: 24%;
-    height: 100%; width: 76%;
-}
-
-nav {
-    background-color: #2f3133;
-    color: #fff;
-    height: 100%; width: 100%;
-    margin: 0; padding: 5%;
-}
-
-nav ul {
-    list-style: none;
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.6rem; font-family: 'Roboto', sans-serif;
     margin: 0; padding: 0;
 }
 
-nav ul#legal {
-    background-color: #171818;
-    color: #54595c;
-    position: absolute;
-    left: 0; bottom: 0;
-    font-size: 0.8em;
-    text-align: center;
-    height: 25%; width: 100%;
-    margin: 0; padding: 7% 0 0;
+h1 { font-size: 4.2rem; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 2.0rem; }
+h4 { font-size: 1.3rem; text-transform: uppercase; }
+
+pre {
+    font-size: 1.2rem; line-height: 1;
+    overflow-y: hidden !important;
 }
 
-#content {
-    background-color: #eaeaea;
-    box-shadow: inset 16px 0 25px -10px rgba(0, 0, 0, 0.6);
-    margin: 0; padding: 2%;
-    min-height: 100%; height: auto; width: 100%;
-}
+ul { list-style: none; margin: 0; padding: 0; }
 
-#content section {
-    height: 100%; width: 61%;
-}
+::-moz-selection { background: #9e56bd; color: #ecf0f1; text-shadow: none; }
+::selection { background: #9e56bd; color: #ecf0f1; text-shadow: none; }
 
-#content aside {
-    position: absolute;
-    top: 0; left: 61%;
+/* ========================================== *\
+    #Shared
+\* ========================================== */
+
+#allwrap { height: 100%; width: 100%; }
+
+/* ========================================== *\
+    #Sidebar
+\* ========================================== */
+
+#sidebar {
+    background-color: #2f3133;
+    box-shadow: 0 0 1.0rem 0.2rem rgba(0, 0, 0, 0.8);
+    position: fixed;
+    color: #fff;
     height: 100%; width: 39%;
-    margin: 0; padding: 2%;
+    margin: 0; padding: 0;
 }
 
-/* ---------------------------------------------------------------------- *\
-    $Helpers
-\* ---------------------------------------------------------------------- */
+#sidebar #details { position: relative; height: 39%; width: 100%; }
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
+#sidebar #details #headshot {
+    position: relative;
+    float: left;
+    height: 100%; width: 60%;
 }
 
-.clearfix:after {
-    clear: both;
+/* center all elements */
+#sidebar #details #headshot img, #sidebar #details nav ul, #sidebar #details #social ul {
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
 }
 
+#sidebar #details #headshot img {
+    background-color: #171818;
+    border: 1px solid #666;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.6);
+    max-height: 85%; max-width: 85%;
+}
+
+#sidebar #details nav {
+    position: relative;
+    float: right;
+    font-size: 1.6rem;
+    height: 66%; width: 40%;
+}
+
+#sidebar #details nav ul {
+    height: 61%; width: 80%;
+}
+
+#sidebar #details nav ul li {
+    border: 1px solid #000;
+    background-color: #171818;
+    height: 23%; width: 83%;
+    margin-top: 0.8rem;
+}
+
+#sidebar #details nav ul li:hover {
+    background-color: #060707;
+    width: 87%;
+}
+
+#sidebar #details nav ul li, #sidebar #details nav ul li:hover {
+    transition: width 0.3s;
+}
+
+#sidebar #details nav ul li a {
+    color: #ddd;
+    display: block;
+    line-height: 2.8;
+    font-size: 1.3rem; font-weight: 700; font-family: 'Open Sans', sans-serif;
+    padding-left: 1.3rem;
+}
+
+#sidebar #details nav ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#sidebar #details #social {
+    position: relative;
+    float: right;
+    font-size: 1.6rem;
+    height: 34%; width: 40%;
+}
+
+#sidebar #details #social ul {
+    height: 30%; width: 80%;
+}
+
+#sidebar #details #social ul li {
+    float: left;
+    text-align: center;
+    height: 100%; max-width: 20%;
+    margin: auto 2.5%;
+}
+
+#sidebar #details #social ul li a {
+    background-color: #1f2021;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    color: #fff;
+    display: block;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    height: 3.2rem; width: 3.2rem;
+    margin: auto;
+}
+
+#sidebar #details #social ul li a:hover {
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+#sidebar #details #social ul li a:active {
+    background-color: #27282a;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+#sidebar #details #social ul li a.fa-stack-overflow { font-size: 2.0rem; }
+
+#sidebar #about {
+    margin: 1.6rem;
+}
+
+#sidebar #about h1, #sidebar #about h2 {
+    text-align: center;
+}
+
+#sidebar #about h1 {
+    border-bottom: 1px solid #444;
+    box-shadow: inset 0 -1px 0 #000;
+    color: #c0392b;
+    margin-bottom: 0.5rem; padding-bottom: 0.3rem;
+}
+
+#sidebar #about h2 {
+    font-size: 1.8rem; font-weight: normal;
+    text-transform: uppercase;
+}
+
+#sidebar #legal {
+    background: #171818 url('/assets/img/css/dvsup.png');
+    border-top: 1px solid #444;
+    position: absolute;
+    color: #5c6265;
+    font-size: 1.2rem;
+    text-align: center;
+    left: 0; bottom: 0;
+    height: 15%; width: 100%;
+}
+
+#sidebar #legal ul {
+    padding: 1.6rem;
+}
+
+/* ========================================== *\
+    #Content
+\* ========================================== */
+
+#main {
+    background-color: #eaeaea;
+    min-height: 100%; width: 61%;
+    margin: 0 0 0 39%;
+}
+
+#main section {
+    padding: 0 2.0rem;
+}

@@ -9,7 +9,7 @@
     "require": {
         "dcp/di": "dev-master",
         "dcp/router": "1.0.*",
-        "league/plates": "1.*",
+        "league/plates": "2.*",
         "symfony/http-foundation": "2.4.*"
     },
     "scripts": {

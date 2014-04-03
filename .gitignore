@@ -5,4 +5,4 @@
 .DS_STORE
 
 # Composer
-vender/*
+vendor/*

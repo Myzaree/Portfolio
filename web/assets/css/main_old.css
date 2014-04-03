@@ -1,0 +1,138 @@
+/*
+    Title:  Portfolio
+    Author: Cameron Condry <ccondry2@gmail.com> (www.cameroncondry.com)
+
+    Table of Contents:
+        $Base           - elements (h1, ul, a)
+        $Content        - general content
+        $Helpers        - helper classes for use across the system
+*/
+
+/* ---------------------------------------------------------------------- *\
+    $Base
+\* ---------------------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%; height: 100%; min-height: 100%;
+}
+
+body {
+    width: 100%; height: 100%; min-height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em; line-height: 1.35em; color: #222; text-align: left;
+}
+
+::-moz-selection { background: #8e44ad; color: #ecf0f1; text-shadow: none; }
+::selection { background: #8e44ad; color: #ecf0f1; text-shadow: none; }
+
+a { color: #3498db; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif; font-weight: normal;
+    line-height: 1em; letter-spacing: -1px;
+    margin: 0; padding: 0.2em 0;
+}
+
+h1, h2 {
+    box-shadow: 0 2px 0 #ccc;
+    color: #e74c3c;
+    font-size: 1.8em;
+    margin-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.0em; line-height: 0.85em; letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+
+pre { font-size: 0.85em; line-height: 1.0em; overflow-y: hidden !important; }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0;
+}
+
+/* ---------------------------------------------------------------------- *\
+    $Content
+\* ---------------------------------------------------------------------- */
+
+#allwrap, {
+    height: 100%; width: 100%;
+}
+
+#nav {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%; width: 24%;
+}
+
+#main-content {
+    position: absolute;
+    top: 0; left: 24%;
+    height: 100%; width: 76%;
+}
+
+nav {
+    background-color: #2f3133;
+    color: #fff;
+    height: 100%; width: 100%;
+    margin: 0; padding: 5%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0; padding: 0;
+}
+
+nav ul#legal {
+    background-color: #171818;
+    color: #54595c;
+    position: absolute;
+    left: 0; bottom: 0;
+    font-size: 0.8em;
+    text-align: center;
+    height: 25%; width: 100%;
+    margin: 0; padding: 7% 0 0;
+}
+
+#content {
+    background-color: #eaeaea;
+    box-shadow: inset 16px 0 25px -10px rgba(0, 0, 0, 0.6);
+    margin: 0; padding: 2%;
+    min-height: 100%; height: auto; width: 100%;
+}
+
+#content section {
+    height: 100%; width: 61%;
+}
+
+#content aside {
+    position: absolute;
+    top: 0; left: 61%;
+    height: 100%; width: 39%;
+    margin: 0; padding: 2%;
+}
+
+/* ---------------------------------------------------------------------- *\
+    $Helpers
+\* ---------------------------------------------------------------------- */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+

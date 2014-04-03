@@ -1,22 +1,21 @@
 <?php $this->layout('base') ?>
 <?php $this->title = 'Home' ?>
 
-<?php $this->start('section') ?>
-<h2>Projects</h2>
-<h3>Project 1:</h3>
-<p><a href="#">Cameron Condry</a></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus illo non quas reiciendis? Accusamus cupiditate deleniti dolor doloribus exercitationem in laboriosam maxime natus neque nobis non quae, saepe sed similique sint vel veniam? Aut ea earum quia recusandae temporibus. Corporis culpa debitis, distinctio eos error illo porro repellendus tenetur!</p>
-<h3>Project 2:</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias, aperiam architecto aspernatur at commodi cumque dolorum eos eveniet excepturi expedita explicabo hic ipsa labore laborum magni maiores molestias natus necessitatibus, nesciunt obcaecati omnis pariatur perspiciatis placeat quae quidem quis quos ratione repellendus sed, sequi tempora tempore velit vitae voluptatum?</p>
-<?php $this->end() ?>
+<?php $this->start('content') ?>
+<h1>Projects</h1>
+<h2>Project 1:</h2>
+<h3>Lorem ipsum dolor sit amet.</h3>
+<h4>Lorem ipsum dolor sit amet.</h4>
+<a href="#">Lorem Ipsum</a>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae consequuntur cumque dolor ea eum, fuga impedit? Aut cum, dolor eaque eos eveniet excepturi, quaerat quasi reiciendis repellendus rerum sint soluta tempora tenetur ut vitae. Blanditiis dignissimos distinctio harum incidunt itaque, minima optio praesentium provident qui reiciendis saepe, sapiente similique!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores cumque distinctio dolore dolorem doloribus eius excepturi explicabo fuga ipsa itaque libero magni nam necessitatibus nobis odio quisquam quod ratione rem rerum saepe sapiente, similique tempore tenetur voluptate. Alias commodi culpa dolorum excepturi expedita maiores possimus praesentium sint. Accusamus ad architecto autem consectetur consequatur culpa debitis dolorem esse et eveniet excepturi fugiat fugit id inventore laboriosam magni modi molestiae nesciunt nihil obcaecati officiis pariatur perspiciatis provident quaerat qui, quibusdam soluta tempore vel voluptatem voluptatum. Ab culpa cum dignissimos eum impedit, nam natus neque nihil nulla officia qui, quod repellat temporibus!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores cumque distinctio dolore dolorem doloribus eius excepturi explicabo fuga ipsa itaque libero magni nam necessitatibus nobis odio quisquam quod ratione rem rerum saepe sapiente, similique tempore tenetur voluptate. Alias commodi culpa dolorum excepturi expedita maiores possimus praesentium sint. Accusamus ad architecto autem consectetur consequatur culpa debitis dolorem esse et eveniet excepturi fugiat fugit id inventore laboriosam magni modi molestiae nesciunt nihil obcaecati officiis pariatur perspiciatis provident quaerat qui, quibusdam soluta tempore vel voluptatem voluptatum. Ab culpa cum dignissimos eum impedit, nam natus neque nihil nulla officia qui, quod repellat temporibus!</p>
 
-<?php $this->start('aside') ?>
-<h1>Cameron Condry</h1>
-<h3>Web Developer</h3>
-<p>Describe Current Job: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi atque dignissimos distinctio fugiat impedit incidunt iste iure laudantium maiores nesciunt odio praesentium quisquam quo quod, repellat, tenetur velit voluptatum. Aperiam cum dignissimos dolorum earum eos fugiat ipsa, itaque odit perferendis possimus praesentium saepe veritatis vitae! Cumque ea maxime non quae, quia quis temporibus tenetur voluptate. Consectetur cupiditate dignissimos excepturi inventore molestias nisi nobis officia provident, quas qui quibusdam quis repellat repellendus rerum totam veritatis.</p>
-<?php $this->end() ?>
-
-<?php $this->start('stats') ?>
-<hr/>
-<?php \App\Utility\Steve::results() ?>
+<h2>Project 2:</h2>
+<h3>Lorem ipsum dolor sit amet.</h3>
+<h4>Lorem ipsum dolor sit amet.</h4>
+<a href="#">Lorem Ipsum</a>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae consequuntur cumque dolor ea eum, fuga impedit? Aut cum, dolor eaque eos eveniet excepturi, quaerat quasi reiciendis repellendus rerum sint soluta tempora tenetur ut vitae. Blanditiis dignissimos distinctio harum incidunt itaque, minima optio praesentium provident qui reiciendis saepe, sapiente similique!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores cumque distinctio dolore dolorem doloribus eius excepturi explicabo fuga ipsa itaque libero magni nam necessitatibus nobis odio quisquam quod ratione rem rerum saepe sapiente, similique tempore tenetur voluptate. Alias commodi culpa dolorum excepturi expedita maiores possimus praesentium sint. Accusamus ad architecto autem consectetur consequatur culpa debitis dolorem esse et eveniet excepturi fugiat fugit id inventore laboriosam magni modi molestiae nesciunt nihil obcaecati officiis pariatur perspiciatis provident quaerat qui, quibusdam soluta tempore vel voluptatem voluptatum. Ab culpa cum dignissimos eum impedit, nam natus neque nihil nulla officia qui, quod repellat temporibus!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores cumque distinctio dolore dolorem doloribus eius excepturi explicabo fuga ipsa itaque libero magni nam necessitatibus nobis odio quisquam quod ratione rem rerum saepe sapiente, similique tempore tenetur voluptate. Alias commodi culpa dolorum excepturi expedita maiores possimus praesentium sint. Accusamus ad architecto autem consectetur consequatur culpa debitis dolorem esse et eveniet excepturi fugiat fugit id inventore laboriosam magni modi molestiae nesciunt nihil obcaecati officiis pariatur perspiciatis provident quaerat qui, quibusdam soluta tempore vel voluptatem voluptatum. Ab culpa cum dignissimos eum impedit, nam natus neque nihil nulla officia qui, quod repellat temporibus!</p>
 <?php $this->end() ?>

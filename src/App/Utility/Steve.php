@@ -75,7 +75,9 @@ abstract class Steve
             'calculated' => array('time' => 0, 'memory' => 0)
         );
 
-        $pad = 2 + strlen(self::formatTime($results['total']['time']));
+        $pad  = strlen(self::formatTime($results['total']['time']));
+        $pad  = $pad < strlen(self::formatMemory($results['total']['memory'])) ? strlen(self::formatMemory($results['total']['memory'])) : $pad;
+        $pad += 2;
 
         echo '<pre>';
         self::line(self::leftPad(self::formatTime($results['total']['time']), $pad) . ' [Total]');
@@ -123,7 +125,7 @@ abstract class Steve
 
     public static function formatTime($time)
     {
-        return number_format($time * 1000, 2) . 'ms';
+        return number_format($time * 1000) . 'ms';
     }
 
     public static function formatMemory($bytes)

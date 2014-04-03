@@ -1,7 +1,7 @@
 <?php
 
 \App\Utility\Steve::initialize();
-\App\Utility\Steve::note('Configurations');
+\App\Utility\Steve::note('Configuration');
 require 'debug.php';
 require 'config.php';
 
